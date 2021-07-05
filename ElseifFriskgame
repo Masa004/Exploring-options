@@ -1,0 +1,47 @@
+name= input("What is your name? ")
+age= int(input("What is your age? "))
+
+Health = 10
+ 
+if age >= 18 :
+    print ("You are old enough to play!")
+    
+    wants_to_play = input("Do you want to play (yes/no)? ").lower()
+    if wants_to_play == "yes" : 
+        print ("Lets play", name.upper(),"! Your current healthscore is", Health,".")
+
+        laundry_or_kitchen = input("Do you want to go to the laundry or stay in the kitchen (laundry/kitchen)? ")
+        if laundry_or_kitchen == "kitchen" :
+                ans = input("How about some risotto... can we leave for ICA right away (yes/no)? ").lower()
+                if ans == "yes" :
+                     print("Great, let's go shopping my love!")
+            
+                elif ans : 
+                  print ("It seems like your bloodsugar is too low, and you need some sugar before you go out..")
+                  ans = input("What kind of fruit do you want banana or orange (banana/orange)? ")
+                  if ans == "banana" :
+                        print ("Here you go. Your lifescore increased fully to", Health,"healthpoints.") 
+                  if ans == "orange" :
+                        Health -= 3
+                        print ("The orange was not organic and had high doses of pesticides. You fell ill and have to go to rest..")
+
+        elif laundry_or_kitchen == "laundry" :
+            print("The walk to the laudryroom causes you to lose 5 healthpoints" )
+            Health -= 5
+            print ("Your healthscore is now", Health,".")
+            ans = input ("Are you warm enough in that clothes before you leave (yes/no)? ")
+            if ans == "yes" :
+                print ("Good decision. You will not freeze. Let's go my love!")
+              
+            if ans == "no" : 
+                print ("You realised that you should have taken off your dirty clothes before heading to laundry. Your smell got to your  nose and lost 5 healthponts. ")
+                Health -= 5
+                if Health <= 0 :
+                  print ("You fell ill and have to go to bed...")
+
+
+    else : 
+        print ("Go away!")
+
+else: 
+    print ("you are not old enough to play")
