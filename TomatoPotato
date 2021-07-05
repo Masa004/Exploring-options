@@ -1,0 +1,9 @@
+name = input ("What is your name? ")
+print ("Hello", name,)
+gronsak = input ("What do you prefer tomato or potato (tomato/potato)? ")
+if gronsak == "tomato":
+  print ("Oh! you like that big, red berry?")
+elif gronsak == "potato" :
+  print ("You like grumpy old french fries!")
+else :
+  print ("You like gooseberries, I've heard!")
